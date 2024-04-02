@@ -1,0 +1,15 @@
+01_boletin_condicionales
+
+1 - área y perímetro de triangulo, cuadrado, rectangulo, circulo y cuadrado
+2 - si eres o no mayor de edad
+4 - decir si num es positivo, negativo o neutro
+5 - si primer peso es una cuarta parte del segundo
+6 - si los dos primeros num multiplicados son el tercero
+7 - 1 al 12 y te dice dia del mes
+8 - pide 2 num, mensaje segun el numero que da la media
+9 - dia y mes nacimiento, signo zodiacal de una persona con gran if
+10 - sueldo semanal de un trabajador, -40h se le paga 20Eh pero si hay +40 se le paga 25Eh
+11 - random / si compra es superior a 100E se aplica un descuento al azar
+12 - elige producto x pantalla y la cantidad, se dice el precio final
+13 - Eleccion de triangulo deseado  y de da el perímetro
+14 - Calculadora basica con cubo y cuadrado con menu bonito
