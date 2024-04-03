@@ -1,0 +1,19 @@
+
+.title_index{
+    font-size: 60px;
+}
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 20px;
+    text-align: center;
+}
+.enlace {
+    text-decoration: none;
+    color: #5babb9 ;
+}
+.filete {
+    border: 2px solid #5babb9;
+    border-radius: 2px;
+    padding-left: 60px;
+    padding-left: 60px;
+}

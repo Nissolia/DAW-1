@@ -1,0 +1,77 @@
+h1 {
+    color: rgb(189, 78, 44);
+    text-align: center;
+}
+h2{
+    text-align: center;
+}
+.cuerpotexto{
+    padding: 20x;
+    margin: 20px;
+}
+body{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.7;
+}
+hr {
+    border: 2px solid rgb(189, 78, 44);
+    border-radius: 2px;
+    padding-left: 60px;
+    padding-right: 60px;
+    line-height: 3;
+    padding-top: 3px;
+    background-color: rgb(189, 78, 44);
+    margin: 20px;
+}
+.drama{
+    padding-left: 0px;
+}
+table, th, td {
+    border: 2px solid rgb(189, 78, 44);
+    border-collapse: collapse;
+    padding: 10px;
+    text-align: center;
+}
+.boton {
+    border: 2px solid rgb(189, 78, 44);
+    background-color: rgb(189, 78, 44);
+    color: white;
+    border-collapse: collapse;
+    padding: 10px;
+    margin: 5px;
+}
+.correo{
+    border: 2px solid rgb(189, 78, 44);
+    border-collapse: collapse;
+    padding: 10px;
+    margin: 5px;
+    color: rgb(172, 172, 172);
+}
+.contacto{
+    border: 2px solid rgb(189, 78, 44);
+    color: rgb(172, 172, 172);
+    border-collapse: collapse;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 105px;
+    margin: 5px;
+}
+.pestilo {
+    color: black;
+}
+footer {
+    text-align: center;
+    margin: 0px;
+}
+.derechos {
+    background-color: rgb(189, 78, 44);
+    padding: 60px;
+    margin-top: 20px;
+    margin-bottom: 0px;
+   
+    color: white;
+    
+}

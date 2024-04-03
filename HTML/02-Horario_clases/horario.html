@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horario de clase</title>
+    <link rel="stylesheet" href="horarioestilo.css">
+</head>
+<body>
+    <table class="tabla">
+        <!-- th table header -->
+        <tr style="background-color: rgb(154, 180, 226);">
+        <!-- tr table rouw - fila que se pone
+            se pone style para poder implementar uno a uno los estilos deseados
+        -->
+            <th style="background-color: rgb(38, 50, 70); color: white;">Horario</th>
+            <th>Lunes</th>
+            <th>Martes</th>
+            <th>Miércoles</th>
+            <th>Jueves</th>
+            <th>Viernes</th>
+        </tr>
+        <tr>
+            <!-- rowspan es para unir tabla en vertical -->
+            <td style="background-color: rgb(154, 180, 226);">8:00</td>
+            <td style="background-color: rgb(226, 167, 152);" rowspan="2">Sistemas</td>
+            <td style="background-color: rgb(128, 216, 175);" rowspan="3">Programación</td>
+            <td style="background-color: rgb(200, 240, 139);">Base de datos</td>
+            <td style="background-color: rgb(128, 216, 175);" rowspan="2">Sistemas</td>
+            <td style="background-color: rgb(200, 240, 139);">Base de datos</td>
+        </tr>
+        <tr>
+            <td style="background-color: rgb(154, 180, 226);">9:00</td>
+            <td style="background-color: rgb(227, 173, 213);">Fol</td>
+            <td style="background-color: rgb(227, 173, 213);">Fol</td>
+        </tr>
+        <tr>
+            <td style="background-color: rgb(154, 180, 226);">10:00</td>
+            <td style="background-color: rgb(227, 173, 213);">Fol</td>
+            <td style="background-color: rgb(241, 196, 118);">Lenguaje de marca</td>
+            <td style="background-color: rgb(200, 240, 139);">Base de datos</td>
+            <td style="background-color: rgb(241, 196, 118);">Lenguaje de marca</td>
+        </tr>
+        <tr>
+            <!-- se pone para unir celdas en horizontal -->
+            <td style="background-color: rgb(176, 79, 70); color: white;" colspan="6">Descanso</td>
+        </tr>
+        <tr>
+            <td style="background-color: rgb(154, 180, 226);">11:30</td>
+            <td style="background-color:  rgb(128, 216, 175);" rowspan="3">Programación</td>
+            <td style="background-color: rgb(200, 240, 139);" rowspan="2">Base de datos</td>
+            <td style="background-color: rgb(241, 196, 118);">Lenguaje de marca</td>
+            <td style="background-color: rgb(200, 240, 139);">Base de datos</td>
+            <td style="background-color: rgb(241, 196, 118);">Lenguaje de marca</td>
+        </tr>
+        <tr>
+            <td style="background-color: rgb(154, 180, 226);">12:30</td>
+            <td style="background-color: rgb(226, 167, 152);" rowspan="2">Sitemas</td>
+            <td style="background-color: rgb(182, 144, 253);" rowspan="2">Entornos de desarollo</td>
+            <td style="background-color:  rgb(128, 216, 175);" rowspan="2">Programación</td>
+        </tr>
+        <tr>
+            <td style="background-color: rgb(154, 180, 226);">13:30</td>
+            <td style="background-color: rgb(182, 144, 253);">Entornos de desarollo</td>
+
+        </tr>
+    </table>
+</body>
+</html>

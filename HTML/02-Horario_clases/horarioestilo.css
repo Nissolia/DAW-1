@@ -1,0 +1,11 @@
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+}
+table, th, td {
+    border: 5px solid white;
+    border-collapse: collapse;
+    /* background-color: aquamarine; */
+    padding: 10px;
+}
+
