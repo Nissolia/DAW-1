@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang= "es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="formulario.css">
+    <title></title>
+</head>
+<body>
+    <header>
+        <h1></h1>
+    </header>
+    <div>
+        <!-- poner las cosas izq y derecha con columnas -->
+        
+            <fieldset>
+                    <legend>Datos personales:</legend>
+                    <form class="seleccion">
+                        <p>Sexo</p>
+                        <input  type="radio" id="Hombre" value="Hombre">
+                        <label for="Hombre">Hombre</label><br>
+                        <input type="radio" id="Mujer" value="Mujer">
+                        <label for="Mujer">Mujer</label><br>
+                    </form>
+                    <div>
+                        <table>
+                            <tr>
+                                <td  style="width: 100%">
+                                    <label for="" class="izqselect">DNI: </label>
+                                    <input type="text" name="" id="">
+                                    <label for=""> - </label>
+                                    <input type="text" name="" id="" style="width: 20px;">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="nombre" class="izqselect">Nombre: </label>
+                                    <input type="text" name="nombre" id="" size="40px">
+                                </td>
+                            </tr>
+                            <tr>
+                                
+                                <td>
+                                    <label for="" class="izqselect">Apellidos: </label>
+                                    <input type="text" name="" id="" size="60px">
+                                </td>
+                                
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="" class="izqselect">Email: </label>
+                                    <input type="text" name="" id="">
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                  
+                </fieldset>
+                
+
+                <fieldset >
+                    <legend>Dirección: </legend>
+                    <label class="izqselect" size="40px">Calle/Avenida: </label>
+                    <input type="text" colpa><br>
+                    
+                    <label class="izqselect">Población: </label>
+                    <input type="text">
+                    Provincia: 
+                    <select name="Provincia" id="Provincia">
+                        <option value="cadiz">Cádiz</option>
+                        <option value="sevilla">Sevilla</option>
+                        <option value="huelva">Huelva</option>
+                        <option value="cordoba">Córdoba</option>
+                        <option value="almeria">Almería</option>
+                        <option value="malaga">Málaga</option>
+                    </select>
+                    </fieldset>
+
+                    <fieldset >
+                        <legend>Archivo:</legend>
+                        
+                        <form>
+                            <form>
+                                <form  enctype="multipart/form-data">
+                                    <p class="izqselect">Subir un Archivo: </p>
+                                    
+                                    <input type="file" id="inputarchivo" name="file" style="display: none;" required>
+                                    <button class="boton"><label for="inputarchivo" id="labelarchivo" class="boton">Selecciona un archivo</label></button>
+                                    
+                                    <input class="boton" type="submit" name="submit" class="btn-success" value="Subir Archivo">
+                                  </form>
+
+
+
+                                
+                                <input type="file" style="display:none;" class="boton" >
+                              </form>
+                            <input type="checkbox" id="acom">
+                            <label for="acom">Archivo comprimido</label>
+                            <input type="checkbox" id="aencrip">
+                            <label for="aencrip">Archivo encriptado</label> <br>
+                            <p class="izqselect">Descripción de la práctica: </p>
+                            <textarea name="message" rows="10" cols="60">
+                                
+                                </textarea>
+                        </form>
+                        
+                    </fieldset>
+
+                    <button type="button" onclick="alert('¡Inscrito, gracias!')" class="boton" class="baline">Enviar</button>
+
+            </form>
+        </form>
+    </div>
+
+    <footer>
+        <p>Noelia Baños &copy; 2023 </p>
+    </footer>
+</body>
+</html>

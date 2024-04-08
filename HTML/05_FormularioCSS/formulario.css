@@ -1,0 +1,49 @@
+footer {
+    text-align: center;
+    
+    color: rgb(38, 84, 136);
+    padding: 20px;
+    margin: 0px;
+    
+}
+.izqselect {
+    width: 100px;
+    height: 15px;
+    display: flex-center;
+    float: left;
+    text-align: right;
+    padding-left: 10px;
+    margin-right: 10px;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    padding: 30px;
+}
+
+p {
+    margin: 0px;
+    padding: 0px;
+}
+
+.seleccion {
+    font-family: 'Times New Roman', Times, serif;
+    float: right;
+    padding: 10px;
+}
+
+.boton {
+    background-color: rgb(38, 84, 136) ;
+    color: white;
+    border: none;
+    padding: 9px;
+    margin: 5px;
+}
+
+tr{
+text-decoration: 20px;
+
+}
+
+
+
