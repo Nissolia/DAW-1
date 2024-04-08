@@ -1,0 +1,76 @@
+
+div.contenedor{
+    margin: 0px;
+}
+.contenedor{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    
+}
+
+.centrado{
+    font-size: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    
+}
+
+body {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url("imagenes/fondo.png");
+    background-repeat: no-repeat;
+    background-position: right top;
+    margin-right: 200px;
+    margin-top: 0px;
+    margin-left: 0px;
+    background-attachment: fixed;
+    width: 100%;
+    
+}
+
+
+h2{
+    font-size: 20px;
+    background-color: black;
+    padding: 10px;
+    color: white;
+}
+
+.personaje{
+    text-align: left;
+    color: white;
+    margin-top: 2%;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.personaje,img{
+    align-items: center;
+}
+
+td.tabla{
+padding: 10px;
+}
+
+.tabla{
+    align-items: center;
+    border-radius: 20px;
+    margin: 50px;
+    border: 5px transparent;
+    padding: 20px;
+    background-color: #C8A17B;
+}
+
+footer{
+    color: white;
+    padding: 30px;
+    
+    margin-left: 0;
+    margin-bottom: 0;
+    margin-top: 20px;
+}
