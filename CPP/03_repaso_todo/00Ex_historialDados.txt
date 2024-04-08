@@ -1,0 +1,21 @@
+Persona: 1, 5 | Suma dados: 6
+Persona: 6, 6 | Suma dados: 12
+Maquina: 6, 1 | Suma dados: 7
+Persona pierde contra pc 
+*******************************
+Persona: 5, 1 | Suma dados: 6
+Maquina: 3, 1 | Suma dados: 4
+Persona pierde contra pc 
+*******************************
+Persona: 1, 3 | Suma dados: 4
+Maquina: 4, 3 | Suma dados: 7
+Persona pierde contra pc 
+*******************************
+Persona: 6, 1 | Suma dados: 7
+Maquina: 5, 6 | Suma dados: 11
+Persona gana a pc 
+*******************************
+Persona: 6, 3 | Suma dados: 9
+Maquina: 6, 5 | Suma dados: 11
+Persona pierde contra pc 
+*******************************

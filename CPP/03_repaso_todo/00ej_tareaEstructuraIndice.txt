@@ -1,0 +1,31 @@
+/**********************************/
+	- AÑADIDOS
+void estadisticaBien(serVivo animal[]);
+void estadisticaTotal(serVivo animal[]);
+void rellenarDatos(serVivo animal[]);
+void mostrarLista(serVivo animal[]);
+void buscarID(serVivo animal[]);
+void cambiarEstado(serVivo animal[]);
+void listaTodos(serVivo animal[]);
+void eliminarAnimales(serVivo animal[]);
+void agregarAnimales(serVivo animal[]);
+void menu(serVivo animal[]);
+
+	- POR HACER
+
+
+bien, porRevisar, enTratamiento
+animal[i].bien
+
+contadorBien = 0,contadorRevisar = 0,contadorTratamiento = 0,
+
+<< "\t Elige el estado del que quieres ver las estadísticas: \n"
+         << "\t1 ............................................... Bien\n"
+         << "\t2 ........................................ Por revisar\n"
+         << "\t3 ..................................... En tratamiento\n\t";
+
+
+rellenar datos en auto
+
+-- corregir
+no existe animal con el código tal

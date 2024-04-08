@@ -1,0 +1,3 @@
+TotalPartidas 5
+TotalGanadasUser 1
+TotalPerdidasUser 4
