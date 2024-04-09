@@ -1,0 +1,51 @@
+img{
+    width: 100%;
+    border-radius: 6px;
+}
+.index{
+    text-decoration: none;
+    color: rgb(160, 206, 141);
+}
+.col {
+    margin: 1.5%;
+    border-radius: 6px;
+}
+
+.titulo {
+    font-size: 50px;
+    font-weight: bolder;
+    padding: 20px;
+}
+
+.index {
+    text-decoration: none;
+    color: rgb(160, 206, 141);
+}
+.filete{
+    border: 2px solid grey;
+    border-radius: 2px;
+}
+
+.tituloReceta{
+    color: grey;
+    font-size: 40px;
+    font-weight: lighter;
+    letter-spacing: 10px;
+    font-variant: small-caps;
+    
+}
+
+.tituloSub {/* titulo dentro recetas */
+    color: rgb(160, 206, 141);
+    padding: 15px;
+}
+
+footer{
+    background-color: rgb(160, 206, 141);
+    padding: 50px;
+    color: white;
+}
+.navbar {
+    color: white !important;
+    background-color: rgb(160, 206, 141) !important;
+}

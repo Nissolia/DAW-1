@@ -1,0 +1,13 @@
+.col{
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 8px;
+    text-align: center;
+}
+.col-12{
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 8px;
+    text-align: center;
+    color: white;
+}
