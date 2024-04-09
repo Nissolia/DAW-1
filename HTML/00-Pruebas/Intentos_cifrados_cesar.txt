@@ -1,0 +1,96 @@
+INTENTOS CIFRADO CESAR
+
+function cifradoCesar1() {
+ /* COPIADO DE INTERNET POR DESESPERACIÓN */
+      var respuesta = "";
+      //bucle for que recorre la cadena y sustituye cada caracter.
+      for (var i = 0; i < texto.value.length; i++) {
+        var caracter = texto.value[i];
+        // Verifica si el caracter es una letra del alfabeto
+        if (/[a-zA-Z]/.test(caracter)) {
+          // sumamos al código del caracter el desplazamiento
+          var codigo = texto.value.indexOf(i) + numero.value;
+          // alfabeto circular: si nos pasamos de la z retrocedemos 26 caracteres 
+          // los 26 del alfabeto anglosajón, jo tenemos soporte para ñ ni acentos.
+          if (/[a-z]/.test(caracter) && codigo > 122) {
+            codigo -= 26;
+          } else if (/[A-Z]/.test(caracter) && codigo > 90) {
+            codigo -= 26;
+          } else if (codigo < 0) {
+            codigo += 26;
+          }      
+          caracter = String.fromCharCode(codigo);
+        }
+        respuesta += caracter;
+      }
+    //   return respuesta;
+      document.getElementById('textoCodificado').value = respuesta;
+
+}
+// PRUEBA 2
+function cifradoCesar2(texto, numero) {
+    let larguraTexto = texto.length;
+    let aux;
+    let letra;
+    let codificado = "";
+    let total = "";
+    // PRIMER TRY
+for (let i = 0; i < texto.value.length; i++) {  
+    // comprobamos la largura del texto
+    for (let y = 0; y < abc.length; y++) {
+        // comprobamos con la largura del string del abc
+        if (texto[i] == abc[y]) {
+            // cuando son la misma letra se le suma el numero
+            codificado = abc[y + numero];
+            // si nos pasamos del string que tenemos comprobamos si nos pasamos
+            if (codificado.length > abc.length) {
+                //si esto pasa lo restamos y lo añadimos desde 0
+                aux = codificado.length - abc.length;
+                codificado = abc[0 + aux];
+                total += codificado;
+            }
+        }else{
+            total += " ";
+        }   
+    }
+}
+
+
+    // se muestra por pantalla lo que vamos a usar
+    document.getElementById('textoCodificado').innerText = total;
+
+}
+
+// PRUEBA 3
+function cifradoCesar3(texto, numero) {
+    let larguraTexto = texto.length;
+    let aux;
+    let letra;
+    let codificado = "";
+    let total = "";
+
+// empezamos los bucles para comenzar a hacer el cifrado cesar
+    for (let i = 0; i < texto.length; i++) {
+        letra = texto.charAt(texto.length - i);
+        // esto para guardar la letra en la última posicion
+        for (let y = 0; y < abc.length; y++) {
+            if (letra == (abc.charAt(y))) {
+                /* lo usamos para ver que la letra es la misma
+                que la del abecedario
+                letra y el abc son el mismo */
+                if (abc.length < (abc.charAt(y + numero))) {
+                    let numAux = abc.length; // comprobamos la largura del abcedario
+                    numAux -= numero; // restamos lo sobrante para saber donde se vuelve a empezar
+                    y = numAux; // volcamos de nuevo el numero auxiliar en la y para que empiece de nuevo
+                }
+                letra = abc.charAt(y);
+                    //y = abc.length;
+            }
+        }
+        
+        total = letra;
+    }
+    // se muestra por pantalla lo que vamos a usar
+    document.getElementById('textoCodificado').innerHTML = total;
+
+}
