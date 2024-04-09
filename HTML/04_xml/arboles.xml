@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- control alt h para que vaya xml -->
+<arboles>
+    <arbol>
+        <nombreC>Acer monspessulanum</nombreC>
+        <nombreComun>Arce menor</nombreComun>
+        <vegetacion>Caducifolio</vegetacion>
+        <altura>10</altura>
+        <forma>Copa esférica. Tronco principal recto con bifurcaciones. Ramaje colgante</forma>
+        <colorP>Verde Brillante</colorP>
+        <resistencia>Fuertes</resistencia>
+    </arbol>
+    <arbol>
+        <nombreC>Olea europea</nombreC>
+        <nombreComun>Olivo</nombreComun>
+        <vegetacion>Perenne</vegetacion>
+        <altura>5</altura>
+        <forma>Copa irregular. Tronco principal irregular con bifurcaciones.</forma>
+    </arbol>
+    <arbol>
+        <nombreComun>Ramaje tortuoso</nombreComun>
+        <colorP>Verde Oscuro</colorP>
+        <resistencia>Media</resistencia>
+    </arbol>
+    <arbol>
+        <nombreC>Platanus orientalis</nombreC>
+        <nombreComun>Platanero</nombreComun>
+        <vegetacion>Caducifolio</vegetacion>
+        <altura>25</altura>
+        <forma> Copa ovoidal. Tronco principal recto. Ramaje expandido</forma>
+        <colorP>Verde Medio</colorP>
+        <resistencia>Medias</resistencia>
+    </arbol>
+    <arbol>
+        <nombreC>Quercus ilex</nombreC>
+        <nombreComun>Encina</nombreComun>
+        <vegetacion>Perenne</vegetacion>
+        <altura>20</altura>
+        <forma>Copa esférica o elíptica irregular. Tronco principal recto. Ramaje tortuoso</forma>
+        <colorP>Plateado</colorP>
+        <resistencia>Fuertes</resistencia>
+    </arbol>
+</arboles>
