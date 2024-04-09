@@ -1,0 +1,44 @@
+body {
+    background-image: url(imagenes/fondo.jpeg);
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    text-align: center;
+}
+.secundario{
+    opacity: 40%;
+}
+
+h2 {
+    font-size: 80px;
+}
+
+img {
+    height: 300px;
+    border: 3px solid white;
+    border-radius: 10px;
+}
+img:hover{
+    opacity: 100%;
+    border: 2px solid blue;
+}
+p{
+    margin-left:300px;
+    margin-right:300px;
+    background-color: black;
+    padding: 10px;
+}
+
+.grande {
+    width: 100%;
+}
+
+.peque {
+    display: inline-block;
+    padding: 10px;
+}
+
+footer {
+    opacity: 50%;
+    text-align: center;
+    padding: 10%;
+}
