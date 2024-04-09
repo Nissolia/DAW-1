@@ -1,0 +1,23 @@
+
+body {
+    background-image: url(cartas/fondoPagina.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+}
+
+.imgCarta {
+    /* Animaciones tomadas de Internet */
+    transition: transform 0.25s ease;
+}
+
+.imgCarta.volteada {
+    transform: rotateY(190deg);
+}
+
+footer{
+    color: #1C3C74;
+    font-size: 10px;
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="webMemoryStyle.css">
+    <title>Memory</title>
+</head>
+
+<body>
+    <div><!-- Web memory card, cuadricula 4x4, 8 dibujitos diferentes-->
+        <div class="container text-center">
+            <!-- primera fila -->
+            <div class="row">
+                <div class="col p-1">
+                    <img class="rounded-3 imgCarta" id="0" onclick="tocar(0)" width="40%" src="cartas/fondo.png" alt="">
+                </div>
+                <div class="col p-1">
+                    <img class="rounded-3 imgCarta" id="1" onclick="tocar(1)" width="40%" src="cartas/fondo.png" alt="">
+                </div>
+                <div class="col p-1">
+                    <img class="rounded-3 imgCarta" id="2" onclick="tocar(2)" width="40%" src="cartas/fondo.png" alt="">
+                </div>
+                <div class="col p-1">
+                    <img class="rounded-3 imgCarta" id="3" onclick="tocar(3)" width="40%" src="cartas/fondo.png" alt="">
+
+                </div>
+            </div>
+            <!-- segunda fila -->
+            <div class="row">
+                <div class="col p-1">
+                    <img class="rounded-3 imgCarta" id="4" onclick="tocar(4)" width="40%" src="cartas/fondo.png" alt="">
+
+                </div>
+                <div class="col p-1">
+                    <img class="rounded-3 imgCarta" id="5" onclick="tocar(5)" width="40%" src="cartas/fondo.png" alt="">
+
+                </div>
+                <div class="col p-1">
+                    <img class="rounded-3 imgCarta" id="6" onclick="tocar(6)" width="40%" src="cartas/fondo.png" alt="">
+
+                </div>
+                <div class="col p-1">
+                    <img class="rounded-3 imgCarta" id="7" onclick="tocar(7)" width="40%" src="cartas/fondo.png" alt="">
+
+                </div>
+            </div>
+            <!-- tercera fila -->
+            <div class="row">
+                <div class="col p-1">
+                    <img class="rounded-3 imgCarta" id="8" onclick="tocar(8)" width="40%" src="cartas/fondo.png" alt="">
+
+                </div>
+                <div class="col p-1">
+                    <img class="rounded-3 imgCarta" id="9" onclick="tocar(9)" width="40%" src="cartas/fondo.png" alt="">
+
+                </div>
+                <div class="col p-1">
+                    <img class="rounded-3 imgCarta" id="10" onclick="tocar(10)" width="40%" src="cartas/fondo.png"
+                        alt="">
+
+                </div>
+                <div class="col p-1">
+                    <img class="rounded-3 imgCarta" id="11" onclick="tocar(11)" width="40%" src="cartas/fondo.png"
+                        alt="">
+
+                </div>
+            </div>
+            <!-- cuarta fila -->
+            <div class="row">
+                <div class="col p-1">
+                    <img class="rounded-3 imgCarta" id="12" onclick="tocar(12)" width="40%" src="cartas/fondo.png"
+                        alt="">
+
+                </div>
+                <div class="col p-1">
+                    <img class="rounded-3 imgCarta" id="13" onclick="tocar(13)" width="40%" src="cartas/fondo.png"
+                        alt="">
+
+                </div>
+                <div class="col p-1">
+                    <img class="rounded-3 imgCarta" id="14" onclick="tocar(14)" width="40%" src="cartas/fondo.png"
+                        alt="">
+
+                </div>
+                <div class="col p-1">
+                    <img class="rounded-3 imgCarta" id="15" onclick="tocar(15)" width="40%" src="cartas/fondo.png"
+                        alt="">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="container text-center p-2">
+        <p>Noelia Baños &copy; 2024 </p>
+    </footer>
+</body>
+<script src="webMemoryFunciones.js"></script>
+
+</html>

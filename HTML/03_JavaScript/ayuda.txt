@@ -1,0 +1,105 @@
+import java.util.Scanner;
+Scanner sc = new Scanner(System.in);
+sc.nextInt();
+
+String.valueOf(dia);
+
+atributos
+constructores
+get and sets
+	public int getx() {return dia;}
+	public void setx(int dia) {this.dia = dia;}
+métodos
+
+(int) Math.random()*10
+
+Nombre n2 = nuevo Nombre();
+
+public String toString(){
+return.....;
+Nombre biblioteca[] = new Nombre[100];
+
+
+String nombre[] = new String[2];
+
+click derecho source
+
+syso > control espacio
+switch, for, if etc
+
+/*aaaa*/
+public static void main(String[] args) {
+
+		
+
+		  Scanner scanner = new Scanner(System.in);
+
+
+
+	        System.out.print("Ingrese la altura de la pirámide: ");
+
+	        int altura = scanner.nextInt();
+
+
+
+	        for (int i = 1; i <= altura; i++) {
+
+	            // Imprimir espacios en blanco
+
+	            for (int j = 1; j <= altura - i; j++) {
+
+	                System.out.print(" ");
+
+	            }
+
+
+
+	            // Imprimir asteriscos
+
+	            for (int k = 1; k <= 2 * i - 1; k++) {
+
+	                System.out.print("*");
+
+	            }
+
+
+
+	            // Ir a la siguiente línea después de imprimir cada fila
+
+	            System.out.println();
+
+	        }
+
+	        System.out.print("Ingrese la altura de la media pirámide: ");
+
+	         altura = scanner.nextInt();
+
+
+
+	        for (int i = 1; i <= altura; i++) {
+
+	            // Imprimir asteriscos
+
+	            for (int j = 1; j <= i; j++) {
+
+	                System.out.print("*");
+
+	            }
+
+
+
+	            // Ir a la siguiente línea después de imprimir cada fila
+
+	            System.out.println();
+
+	        }
+
+
+
+	        scanner.close();
+
+
+
+	 
+
+	    }

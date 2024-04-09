@@ -1,0 +1,27 @@
+body {
+    background-color: rgb(19, 15, 7);
+    color: white;
+    width: 100%;
+    background-image: url(https://cdn.pixabay.com/photo/2019/12/31/17/40/architecture-4732390_1280.jpg);
+    background-size: cover;
+    background-position: right top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+p {
+    font-size: small;
+    margin: 0px;
+}
+
+.codificado{
+    font-size: 30px;
+    color: white;
+    font-weight: 650;
+
+}
+
+footer{
+    display: block;
+    position: bottom;
+}

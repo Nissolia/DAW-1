@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo cartitas</title>
+    <!-- ---------------------------- -->
+    <!-- Estilo de cartas y la movida -->
+    <!-- ---------------------------- -->
+
+    <style>
+        /* Por completo */
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+
+        /* Cartas y las imagenes */
+        img {
+            width: 200px;
+            padding: 20px;
+            border-radius: 40px;
+        }
+
+        img.vuelta{
+            transform: rotateY(190deg);
+
+        }
+    </style>
+    <!-- ------------------- -->
+    <!-- Codigo que usaremos -->
+    <!-- ------------------- -->
+</head>
+
+<body>
+    <h2>Cartas</h2>
+
+    <img class="cartas" onclick="tocarCarta(0)" id="0" src="cartas/fondo.png"
+        alt="Carta con fondo azul y bolitas de navidad amarillas rayadas">
+    <img class="cartas" onclick="tocarCarta(1)" id="1" src="cartas/fondo.png"
+        alt="Carta roja con decoraciones blancas y circulo en el centro">
+    <br>
+    <img class="cartas" onclick="tocarCarta(2)" id="2" src="cartas/fondo.png"
+        alt="Carta con fondo azul y bolitas de navidad amarillas rayadas">
+    <img class="cartas" onclick="tocarCarta(3)" id="3" src="cartas/fondo.png"
+        alt="Carta roja con decoraciones blancas y circulo en el centro">
+
+<p id="prueba"></p>
+</body>
+<!-- -------------------------------------- -->
+<!-- El script que usaremos para javaScript -->
+<!-- -------------------------------------- -->
+<script>
+    // tenemos 0,1,2,3
+    let imagenes = ["cartas/1.png", "cartas/2.png", "cartas/1.png", "cartas/2.png"];
+    // Cartas que tenemos
+    let numeroCarta, numeroCarta2;
+    let contadorClick = 0;
+    let carta1, carta2;
+    let prueba = document.getElementById("prueba");
+    // funciones
+    function tocarCarta(numeroCarta) {
+        if (contadorClick == 0) {
+            
+             carta1 = document.getElementById(numeroCarta);
+            carta1.src = imagenes[numeroCarta];
+            carta1.classList.add('vuelta');
+            // primera carta cogida
+            contadorClick++;
+            prueba.innerHTML = carta1.src;
+        }
+        else if (contadorClick == 1) {
+            let carta2 = document.getElementById(numeroCarta);
+            carta2.src = imagenes[numeroCarta];
+            carta2.classList.add('vuelta');
+            // segunda carta cogida
+            contadorClick++;
+            prueba.innerHTML = carta2.src;
+            // comparamos las cartas que tenemos
+            if (carta1.src != carta2.src) {
+                carta1.classList.remove('vuelta');
+                carta2.classList.remove('vuelta');
+                contadorClick = 0;
+
+                carta1.src = "cartas/fondo.png";
+                carta2.src = "cartas/fondo.png";
+                prueba.innerHTML = "cambia las cartas";
+            } else {
+                alert('¡Muy bien, acertaste!')
+            }
+        }
+
+
+    }
+    /*****************************************************/
+    function comparacion(numeroCarta) {
+
+
+    }
+</script>
+
+</html>

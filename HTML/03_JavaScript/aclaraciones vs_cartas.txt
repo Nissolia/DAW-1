@@ -1,0 +1,86 @@
+/********************/
+/* ELEMENTO LLAMADO */
+/********************/
+
+// let imagenes = ["cartas/1.png", "carta2.png", "carta3.png", "carta4.png"]
+// let cartas = document.getElementById(elecc);
+
+/***************************************/
+/** VARIABLES E INTRODUCCION DE DATOS **/
+/***************************************/
+
+// for (let x = 0; x < 16; x++) {
+//     let cartas = document.getElementById(x);
+// }
+// let cartas = document.getElementById(elecc);
+
+/*
+let pantalla = document.getElementById('pantalla');
+
+for (let x = 0; x < 8; x++) {
+    let x = document.getElementById(elecc);
+}
+let turno = 0
+let anterior = 0;
+*/
+
+/* generador de cartas por array automatico */
+
+// for (let x = 0; x < 8; x++) {
+//     let imagenes = [(x+1)".png"];
+// }
+/*************/
+/* FUNCIONES */
+/*************/
+// random = Math.floor(Math.random() * 7);
+/*
+  1. hacer que al darle click muestre la imagen real de la carta.
+  2. debe mantenerse girada la carta aun girando otra carta
+  3. hacer click en otra carta que no sea la anterior
+  4. que se mantengan dadas la vuelta ambas cartas
+  5. una vez dada la vuelta ambas cartas mediante una variable la cual será name comprobar si coinciden ambas
+    5.1. poner el nombre de dicha carta en el html, sacarlo mediante getElement y realizar la comparacion directamente.
+  6. si coinciden ambas no hacer nada con las cartas y sumar +1 al contador de aciertos
+  7. si las cartas son distintas sumar 1 al contador de fallos.
+    7.1. cuando se da este caso las cartas deben girarse a la vez. esto se hace con una bandera.
+
+  8. realizar comprobaciones
+  9. mediante la variable fin realizas la comprobación inicial.
+
+    ****
+    variables
+        Fallo -> int -> 0
+        aciertos -> int -> 0
+        boolean fin -> true / false -> para que no puedas realizar otra vez dicha comprobación
+        boolean vuelta -> true / false
+ */
+
+// function tocar(elecc) {
+//     carta.src = imagenes[elecc];
+//     console.log(elecc);
+//     if (turno = 0) {
+//         turno = turno + 1;
+//         console.log(turno);
+//         anterior = elecc;
+//     } else {
+//         if (imagenes[elecc] = !imagenes[anterior]) {
+//             alert("HAS FALLADO");
+//             turno = 0;
+//             destocar(elecc, anterior);
+//         }
+//         console.log(elecc.src);
+//     }
+// };
+// function destocar(carta1, carta2) {
+//     document.getElementById(carta1).src = "fondocarta.png"
+//     console.log("Carta1");
+//     document.getElementById(carta2).src = "fondocarta.png"
+//     console.log("Carta2");
+// };
+
+// function tocar(elemento) {
+//     document.getElementById("carta").src = "image2.jpg";
+//     console.log(elemento.); };
+/* getElementById captura el elemento que desees
+   document.getElementById("demo").innerHTML = "Hello World!"; -> esta "funcion" sirve para sobrescribir texto donde tu desees
+*/
