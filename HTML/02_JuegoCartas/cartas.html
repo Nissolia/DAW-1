@@ -1,0 +1,87 @@
+z<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="stylo.css">
+    <title>Cartas con JS</title>
+</head>
+
+<body class="container-fluid bg-black">
+    <div class="container text-center justify-content-center divgrande">
+        <div class="row justify-content-center">
+
+            <div class="col-2 p-1">
+                <img class="rounded-2 ml-1 img-carta" width="134px" id="0" src="imagenes/fondo-carta2.jpg" onclick='cambiarCarta("0")'
+                    alt="">
+            </div>
+            <div class="col-2 p-1">
+                <img class="rounded-2 img-carta" width="134px" id="1" src="imagenes/fondo-carta2.jpg" onclick='cambiarCarta("1")' alt="">
+            </div>
+            <div class="col-2 p-1">
+                <img class="rounded-2 img-carta" width="134px" id="2" src="imagenes/fondo-carta2.jpg" onclick='cambiarCarta("2")' alt="">
+            </div>
+            <div class="col-2 p-1">
+                <img width="134px" class="rounded-2 img-carta" id="3" src="imagenes/fondo-carta2.jpg" onclick='cambiarCarta("3")' alt="">
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+
+            <div class="col-2 p-1">
+                <img width="134px" class="rounded-2 img-carta" id="4" src="imagenes/fondo-carta2.jpg" onclick='cambiarCarta("4")' alt="">
+            </div>
+            <div class="col-2 p-1">
+                <img width="134px" class="rounded-2 img-carta" id="5" src="imagenes/fondo-carta2.jpg" onclick='cambiarCarta("5")' alt="">
+            </div>
+            <div class="col-2 p-1">
+                <img width="134px" class="rounded-2 img-carta" id="6" src="imagenes/fondo-carta2.jpg" onclick='cambiarCarta("6")' alt="">
+            </div>
+            <div class="col-2 p-1">
+                <img width="134px" class="rounded-2 img-carta" id="7" src="imagenes/fondo-carta2.jpg" onclick='cambiarCarta("7")' alt="">
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+
+            <div class="col-2 p-1">
+                <img width="134px" class="rounded-2 img-carta" id="8" src="imagenes/fondo-carta2.jpg" onclick='cambiarCarta("8")' alt="">
+            </div>
+            <div class="col-2 p-1">
+                <img width="134px" class="rounded-2 img-carta" id="9" src="imagenes/fondo-carta2.jpg" onclick='cambiarCarta("9")' alt="">
+            </div>
+            <div class="col-2 p-1">
+                <img width="134px" class="rounded-2 img-carta" id="10" src="imagenes/fondo-carta2.jpg" onclick='cambiarCarta("10")' alt="">
+            </div>
+            <div class="col-2 p-1">
+                <img width="134px" class="rounded-2 img-carta" id="11" src="imagenes/fondo-carta2.jpg" onclick='cambiarCarta("11")' alt="">
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+
+            <div class="col-2 p-1">
+                <img width="134px" class="rounded-2 img-carta" id="12" src="imagenes/fondo-carta2.jpg" onclick='cambiarCarta("12")' alt="">
+            </div>
+            <div class="col-2 p-1">
+                <img width="134px" class="rounded-2 img-carta" id="13" src="imagenes/fondo-carta2.jpg" onclick='cambiarCarta("13")' alt="">
+            </div>
+            <div class="col-2 p-1">
+                <img width="134px" class="rounded-2 img-carta" id="14" src="imagenes/fondo-carta2.jpg" onclick='cambiarCarta("14")' alt="">
+            </div>
+            <div class="col-2 p-1">
+                <img width="134px" class="rounded-2 img-carta" id="15" src="imagenes/fondo-carta2.jpg" onclick='cambiarCarta("15")' alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="top-50 end-1 translate-middle-y position-fixed p-3 m-4 mt-0">
+        <p class="rounded-2 text-center h3 font-monospace text-white">|BARRA DE VIDA|</p>
+        <progress class="rounded-3 bg-danger background-color h3" value="100" max="100" id="barraProgreso"></progress>
+    </div>
+</body>
+<script src="cartas.js"></script>
+
+</html>

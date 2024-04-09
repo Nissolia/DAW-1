@@ -1,0 +1,18 @@
+
+.divgrande{
+    width:60%;
+}
+body{
+    background-image:url(imagenes/fondo-animado.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width:100%;
+}
+
+.img-carta { /*Las animaciones no son mias, son sacadas de internet*/
+    transition: transform 0.25s ease;
+}
+
+.img-carta.volteada {
+    transform: rotateY(190deg);
+}
