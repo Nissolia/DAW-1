@@ -1,0 +1,89 @@
+
+
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 35px;
+    color: rgb(190, 240, 223);
+    font-variant: small-caps;
+
+}
+h2{
+    font-weight: lighter;
+    
+}
+
+  body{
+    align-self: center;
+    align-items: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-image: url(imagenes/fondo.jpeg);
+    color: white;
+}
+
+a{
+    text-decoration: none;
+    color: antiquewhite;
+}a:hover {
+    color: blue;
+}
+
+img {
+    /* width: 300px; */
+    height: 205px;
+    border-radius: 30px;
+    border: 3px solid white;
+}
+form{
+    margin:5%;
+}
+.contacta{
+    float: right;
+}
+label{
+    width: 100px;
+    height: 15px;
+    display: flex-center;
+    float: left;
+    text-align: right;
+    padding-left: 10px;
+    margin-right: 10px;
+}
+
+
+
+table{
+    text-align: center;
+    align-content: center;
+}
+.anexo{
+    border: 2px solid rgb(183, 183, 255);
+    border-radius: 20px;
+    padding: 10px;
+}
+td{
+    border: 2px solid #73AD21;
+}
+table,td{
+    padding: 20px;
+}
+
+.boton{
+    text-align: center;
+    float: right;
+    margin: 20px;
+    padding-right: 40px;
+}
+button{
+    float: right;
+}
+
+.derechos{
+    font-size: 14px;
+}
+footer{
+    color: white;
+    text-align: center;
+    padding: 20px;
+    
+}
