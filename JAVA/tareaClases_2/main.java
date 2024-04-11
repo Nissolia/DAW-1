@@ -7,7 +7,7 @@ public class main {
 		Persona lista[] = new Persona[5];
 
 		
-		Persona lista[i].equals();
+		
 	}//fin donde se escribe
 
 }//fin main

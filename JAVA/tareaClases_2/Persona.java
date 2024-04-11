@@ -100,36 +100,38 @@ public class Persona {
 	 */
 	@Override
 	public boolean equals(Object obj) {
+		boolean salir = false;
 		// Verificar si obj es una instancia de Persona
-		if (obj instanceof Persona) {
-			// Convertir obj a Persona
-			Persona tmpPersona = (Persona) obj;
-			// Comparar los atributos nombre y dni
-			if (this.nombre.equals(tmpPersona.nombre) && this.dni.equals(tmpPersona.dni)) {
-				// Si los atributos nombre y dni son iguales, retornar true
-				return true;
-			} else {
-				// Si al menos uno de los atributos no coincide, retornar false
-				return false;
+		if (obj != null) {
+			salir = true;
+		} else if (!(obj instanceof Persona)) {
+			salir = false;
+		} else {
+			Persona aux = (Persona) obj;
+			if (this.dni.equals(aux.getDni())) {
+				salir = true;
 			}
 		}
-		// Si obj no es una instancia de Persona, retornar false
-		return false;
+		return salir;
 	}
 
 	/**
-	 * Static method
-	 * BUSQUEDA ACEPTA 2 ELEMENTOS: ARRAY DE PERSONAS, UNA PERSONA
+	 * Static method buscamos la misma persona
 	 * 
 	 * @param persona array
 	 * @param persona
 	 * @return boolean
 	 */
 
-	public static boolean busqueda(Persona lista[], Persona persona) {
-		boolean bandera = false;
+	public static boolean busqueda(Persona lista[], Persona p) {
+		boolean encontrado = false;
+		if (lista.length > 0 && p != null) {
+			for (int i = 0; i < lista.length; i++) {
+				p.equals(lista[i]);
+			}
+		}
 
-		return bandera;
+		return encontrado;
 	}
 
 }
