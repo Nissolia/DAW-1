@@ -1,0 +1,41 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <!--tipo complejo "atomo" -->
+  <xs:complexType name="atomo">
+    <xs:sequence>
+      <xs:element name="nombre" type="xs:string"/>
+      <xs:element name="simbolo" type="xs:string"/>
+      <xs:element name="numeroAtomico" type="xs:integer"/>
+      <xs:element name="pesoAtomico" type="xs:decimal"/>
+      <xs:element name="puntoEbullicion">
+        <xs:complexType>
+          <xs:simpleContent>
+            <xs:extension base="xs:decimal">
+              <xs:attribute name="unidades" type="xs:string"/>
+            </xs:extension>
+          </xs:simpleContent>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="densidad">
+        <xs:complexType>
+          <xs:simpleContent>
+            <xs:extension base="xs:decimal">
+              <xs:attribute name="unidades" type="xs:string"/>
+            </xs:extension>
+          </xs:simpleContent>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="estado" type="xs:string"/>
+  </xs:complexType>
+
+  <!-- elemento "tablaPeriodica" -->
+  <xs:element name="tablaPeriodica">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="atomo" type="atomo" minOccurs="1" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>

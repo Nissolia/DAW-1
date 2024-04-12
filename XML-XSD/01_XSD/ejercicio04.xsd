@@ -1,0 +1,59 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <!-- dato "tipoSexo"-->
+  <xs:simpleType name="tipoSexo">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="hombre"/>
+      <xs:enumeration value="mujer"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+ <!-- dato "tipoID"-->
+  <xs:simpleType name="tipoID">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[a-zA-Z0-9_-]+"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+ <!-- dato "tipoNombre"-->
+  <xs:simpleType name="tipoNombre">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+
+ <!-- dato "tipoEmail"-->
+  <xs:simpleType name="tipoEmail">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+
+ <!-- dato "tipoAmigoDe"-->
+  <xs:simpleType name="tipoAmigoDe">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+
+ <!-- dato "persona"-->
+  <xs:element name="persona">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="nombre" type="tipoNombre"/>
+        <xs:element name="email" type="tipoEmail"/>
+        <xs:element name="relacion" minOccurs="0">
+          <xs:complexType>
+            <xs:attribute name="amigo-de" type="tipoAmigoDe"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="sexo" type="tipoSexo"/>
+      <xs:attribute name="id" type="tipoID"/>
+    </xs:complexType>
+  </xs:element>
+
+ <!-- dato "listin"-->
+  <xs:element name="listin">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="persona" minOccurs="1" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>

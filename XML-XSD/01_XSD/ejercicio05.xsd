@@ -1,0 +1,84 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <!-- atributo "id" -->
+  <xs:simpleType name="tipoID">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[a-zA-Z0-9_-]+"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- elemento "descripcion" -->
+  <xs:simpleType name="tipoDescripcion">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+
+  <!-- elemento "marca" -->
+  <xs:simpleType name="tipoMarca">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+
+  <!-- elemento "medida" -->
+  <xs:simpleType name="tipoMedida">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+
+  <!-- atributo "unidad" del elemento "medida" -->
+  <xs:simpleType name="tipoUnidad">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+
+  <!-- elemento "seccion" -->
+  <xs:simpleType name="tipoSeccion">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+
+  <!-- elemento "oferta" -->
+  <xs:simpleType name="tipoOferta">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+
+  <!-- fecha de fabricación -->
+  <xs:simpleType name="tipoFabricacion">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+
+  <!-- la fecha de caducidad -->
+  <xs:simpleType name="tipoCaducidad">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+
+  <!-- elemento "perecedero" -->
+  <xs:element name="perecedero">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="fabricacion" type="tipoFabricacion"/>
+        <xs:element name="caducidad" type="tipoCaducidad"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- elemento "articulo" -->
+  <xs:element name="articulo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="descripcion" type="tipoDescripcion"/>
+        <xs:element name="marca" type="tipoMarca"/>
+        <xs:element name="medida" type="tipoMedida"/>
+        <xs:element name="seccion" type="tipoSeccion"/>
+        <xs:element name="oferta" type="tipoOferta" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element ref="perecedero" minOccurs="0"/>
+      </xs:sequence>
+      <xs:attribute name="id" type="tipoID"/>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- elemento "supermercado" -->
+  <xs:element name="supermercado">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="articulo" minOccurs="1" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>

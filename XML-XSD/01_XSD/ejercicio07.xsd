@@ -1,0 +1,124 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <!-- dato para DNI o pasaporte -->
+  <xs:simpleType name="tipoDocumento">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+
+  <!-- dato para el país de procedencia -->
+  <xs:simpleType name="tipoPais">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+
+  <!-- dato para nombre y apellidos -->
+  <xs:simpleType name="tipoNombre">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+
+  <!-- dato para la fecha de nacimiento -->
+  <xs:simpleType name="tipoFechaNacimiento">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+
+  <!-- dato para dirección postal -->
+  <xs:simpleType name="tipoDireccion">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+
+  <!-- dato para teléfono -->
+  <xs:simpleType name="tipoTelefono">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+
+  <!-- dato para cuenta de correo -->
+  <xs:simpleType name="tipoCorreo">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+
+  <!-- dato para la nota -->
+  <xs:simpleType name="tipoNota">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NP"/>
+      <xs:enumeration value="SS"/>
+      <xs:enumeration value="AP"/>
+      <xs:enumeration value="NT"/>
+      <xs:enumeration value="SB"/>
+      <xs:enumeration value="MH"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- dato para el código de asignatura -->
+  <xs:simpleType name="tipoCodigoAsignatura">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+
+  <!-- dato para el número de créditos -->
+  <xs:simpleType name="tipoCreditos">
+    <xs:restriction base="xs:integer"/>
+  </xs:simpleType>
+
+  <!-- dato para la carrera -->
+  <xs:simpleType name="tipoCarrera">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+
+  <!-- dato para el curso -->
+  <xs:simpleType name="tipoCurso">
+    <xs:restriction base="xs:integer"/>
+  </xs:simpleType>
+
+  <!-- elemento "contacto" -->
+  <xs:element name="contacto">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="direccion" type="tipoDireccion" minOccurs="0"/>
+        <xs:element name="telefono" type="tipoTelefono" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element name="correo" type="tipoCorreo" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- elemento "persona" -->
+  <xs:element name="persona">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="documento" type="tipoDocumento"/>
+        <xs:element name="nombre" type="tipoNombre"/>
+        <xs:element name="fecha_nacimiento" type="tipoFechaNacimiento"/>
+        <xs:element ref="contacto" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- elemento "profesor" -->
+  <xs:element name="profesor">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="persona"/>
+        <xs:element name="despacho" type="tipoDireccion"/>
+        <xs:element name="tutorias" type="tipoTelefono" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:element name="asignaturas" type="tipoCodigoAsignatura" minOccurs="0" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+
+  <!-- elemento "alumno" -->
+  <xs:element name="alumno">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="persona"/>
+        <xs:element name="asignaturas" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="asignatura" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  
+
+                    </xs:schema>

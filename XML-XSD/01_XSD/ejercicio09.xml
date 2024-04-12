@@ -1,0 +1,11 @@
+<tablaPeriodica xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ejercicio09.xsd">
+    <atomo estado="gas">
+      <nombre>Hidrógeno</nombre>
+      <simbolo>H</simbolo>
+      <numeroAtomico>1</numeroAtomico>
+      <pesoAtomico>1.007</pesoAtomico>
+      <puntoEbullicion unidades="kelvin">20.28</puntoEbullicion>
+      <densidad unidades="gramos/centímetros cúbicos">0.0899</densidad>
+    </atomo>
+  </tablaPeriodica>
+  

@@ -1,0 +1,10 @@
+
+<editorial xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ejercicio08.xsd">
+    <nombre>Editorial Sinlu</nombre>
+    <direccion>Calle Principal, 123</direccion>
+    <email>info@editorialsinlu.com</email>
+    <pagina>www.editorialsinlu.com</pagina>
+    <telefono>987876543</telefono>
+    <fax/>    
+</editorial>
+  

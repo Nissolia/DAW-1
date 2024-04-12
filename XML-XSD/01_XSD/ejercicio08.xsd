@@ -1,0 +1,47 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <!-- dato para el nombre de la editorial -->
+  <xs:simpleType name="tipoNombre">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+
+  <!-- dato para la dirección -->
+  <xs:simpleType name="tipoDireccion">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+
+  <!-- dato para el email -->
+  <xs:simpleType name="tipoEmail">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+
+  <!-- dato para la página web -->
+  <xs:simpleType name="tipoPagina">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+
+  <!-- dato para el teléfono -->
+  <xs:simpleType name="tipoTelefono">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+
+  <!-- dato para el fax -->
+  <xs:simpleType name="tipoFax">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+
+  <!-- elemento "editorial" -->
+  <xs:element name="editorial">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="nombre" type="tipoNombre"/>
+        <xs:element name="direccion" type="tipoDireccion"/>
+        <xs:element name="email" type="tipoEmail"/>
+        <xs:element name="pagina" type="tipoPagina"/>
+        <xs:element name="telefono" type="tipoTelefono" minOccurs="0"/>
+        <xs:element name="fax" type="tipoFax" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>

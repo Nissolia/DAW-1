@@ -1,0 +1,82 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <!-- atributo "nick" -->
+  <xs:simpleType name="tipoNick">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+
+  <!-- elemento "titulo" -->
+  <xs:simpleType name="tipoTitulo">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+
+  <!-- atributo "id" del elemento "autor" -->
+  <xs:simpleType name="tipoAutorID">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+
+  <!-- atributo "idref" del elemento "autor" -->
+  <xs:simpleType name="tipoAutorIDRef">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+
+  <!-- atributo "id" del elemento "editorial" -->
+  <xs:simpleType name="tipoEditorialID">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+
+  <!-- atributo "idref" del elemento "editorial" -->
+  <xs:simpleType name="tipoEditorialIDRef">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+
+  <!-- fecha de publicación -->
+  <xs:simpleType name="tipoFechaPublicacion">
+    <xs:restriction base="xs:string"/>
+  </xs:simpleType>
+
+  <!-- elemento "autor" -->
+  <xs:element name="autor">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="tipoAutorID">
+          <xs:attribute name="id" type="tipoAutorID" use="required"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- elemento "editorial" -->
+  <xs:element name="editorial">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute name="id" type="tipoEditorialID"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- elemento "libro" -->
+  <xs:element name="libro">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="titulo" type="tipoTitulo"/>
+        <xs:element ref="autor" minOccurs="1" maxOccurs="unbounded"/>
+        <xs:element ref="editorial"/>
+        <xs:element name="fechapublicacion" type="tipoFechaPublicacion"/>
+      </xs:sequence>
+      <xs:attribute name="nick" type="tipoNick"/>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- elemento "biblioteca" -->
+  <xs:element name="biblioteca">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="libro" minOccurs="1" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>

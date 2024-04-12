@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="listaCompra">
+   <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Mercadona">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="leche">
+          <xs:complexType>
+            <xs:simpleContent>
+              <xs:extension base="xs:string">
+                <xs:attribute name="cantidad" type="xs:integer"/>
+                <xs:attribute name="unidad" type="xs:string"/>
+              </xs:extension>
+            </xs:simpleContent>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="pan">
+          <xs:complexType>
+            <xs:simpleContent>
+              <xs:extension base="xs:string">
+                <xs:attribute name="cantidad" type="xs:integer"/>
+              </xs:extension>
+            </xs:simpleContent>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="Carrefour">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="fruteria" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  
+
+</xs:schema>

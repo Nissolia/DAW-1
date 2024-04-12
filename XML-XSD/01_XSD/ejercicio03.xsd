@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="lista_de_cargos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="cargo" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="uniforme">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="gorro">
+                      <xs:complexType>
+                        <xs:attribute name="tipo" type="xs:string" use="required"/>
+                        <xs:attribute name="color" type="xs:string" use="required"/>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="prenda_sup" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:attribute name="tipo" type="xs:string" use="required"/>
+                        <xs:attribute name="color" type="xs:string" use="required"/>
+                        <xs:attribute name="manga" type="xs:string" use="required"/>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="prenda_inf" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:attribute name="tipo" type="xs:string" use="required"/>
+                        <xs:attribute name="color" type="xs:string" use="required"/>
+                        <xs:attribute name="cierre" type="xs:string" use="required"/>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="nombre" type="xs:string" use="required"/>
+            <xs:attribute name="sueldo" type="xs:decimal" use="required"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>
