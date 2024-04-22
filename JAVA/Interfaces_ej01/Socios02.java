@@ -60,8 +60,11 @@ public class Socios02 implements Comparable<Socios02> {
 
 	// Método para generar un nombre aleatorio
 	private static String generarNombreAleatorio() {
-		String[] nombres = { "Juan", "María", "Pedro", "Ana", "Luis", "Sofía", "Carlos", "Laura", "Pablo", "Elena" };
-		int rand = (int) (Math.random() * 10);
+		String[] nombres = { "Juan", "María", "Pedro", "Ana", "Luis", "Sofía", "Carlos", "Laura", "Pablo", "Elena",
+                "Manuel", "Isabel", "Antonio", "Carmen", "Francisco", "Lucía", "Diego", "Marta", "Javier", "Raquel",
+                "Alberto", "Natalia", "José", "Rocío", "David", "Silvia", "Miguel", "Eva", "Alejandro", "Patricia" };
+
+		int rand = (int) (Math.random() * 30);
 
 		return nombres[rand];
 	}
