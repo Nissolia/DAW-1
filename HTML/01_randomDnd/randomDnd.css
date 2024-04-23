@@ -1,4 +1,32 @@
 body {
-    font-family: Arial, sans-serif;
     margin: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-image: url(https://cdn.pixabay.com/photo/2018/01/12/14/24/night-3078326_1280.jpg);
+    color: aliceblue;
+    text-align: center;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+button {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    background-color: rgb(158, 201, 166);
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+button:hover {
+    background-color: rgb(106, 164, 117);
+}
+
+.grande {
+   
+    text-align: center;
+    padding: 20px;
+    border-radius: 20px;
+   
 }

@@ -17,10 +17,10 @@ const razas = ["Humano", "Elfo", "Enano", "Mediano", "Dragonborn", "Gnomo", "Med
 
             const output = document.getElementById("output");
             output.innerHTML = `
-                <h2>Raza: ${razas[razaIndex]}</h2>
-                <h2>Clase: ${clases[claseIndex]}</h2>
-                <h2>Trasfondo: ${trasfondos[trasfondoIndex]}</h2>
-                <h2>Profesión: ${profesiones[profesionIndex]}</h2>
-                <h2>Alineamiento: ${alineamientos[alineamientoIndex]}</h2>
+                <h3>${razas[razaIndex]}</h3>
+                <h3>${clases[claseIndex]}</h3>
+                <h3>${trasfondos[trasfondoIndex]}</h3>
+                <h3>${profesiones[profesionIndex]}</h3>
+                <h3>${alineamientos[alineamientoIndex]}</h3>
             `;
         }
