@@ -61,27 +61,28 @@ public class Socios02 implements Comparable<Socios02> {
 	// Método para generar un nombre aleatorio
 	private static String generarNombreAleatorio() {
 		String[] nombres = { "Juan", "María", "Pedro", "Ana", "Luis", "Sofía", "Carlos", "Laura", "Pablo", "Elena",
-                "Manuel", "Isabel", "Antonio", "Carmen", "Francisco", "Lucía", "Diego", "Marta", "Javier", "Raquel",
-                "Alberto", "Natalia", "José", "Rocío", "David", "Silvia", "Miguel", "Eva", "Alejandro", "Patricia" };
+				"Manuel", "Isabel", "Antonio", "Carmen", "Francisco", "Lucía", "Diego", "Marta", "Javier", "Raquel",
+				"Alberto", "Natalia", "José", "Rocío", "David", "Silvia", "Miguel", "Eva", "Alejandro", "Patricia" };
 
 		int rand = (int) (Math.random() * 30);
 
 		return nombres[rand];
 	}
-	
+
+	/* Ordenamiento por inserción */
 	public static void OrdenarSocios(Socios02[] socios) {
-	    int n = socios.length;
-	    for (int i = 0; i < n - 1; i++) {
-	        for (int j = 0; j < n - i - 1; j++) {
-	            if (socios[j].getCuenta() > socios[j + 1].getCuenta()) {
-	                // Intercambiar socios[j] y socios[j+1]
-	                Socios02 temp = socios[j];
-	                socios[j] = socios[j + 1];
-	                socios[j + 1] = temp;
-	            }
-	        }
-	    }
+		int n = socios.length;
+		for (int i = 1; i < n; ++i) {
+			Socios02 aux = socios[i];
+			int j = i - 1;
+
+			// Mover los elementos de socios[0..i-1] que son mayores que key
+			// a una posición adelante de su posición actual
+			while (j >= 0 && socios[j].compareTo(aux) > 0) {
+				socios[j + 1] = socios[j];
+				j = j - 1;
+			}
+			socios[j + 1] = aux;
+		}
 	}
-
-
 }
