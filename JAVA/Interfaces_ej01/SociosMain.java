@@ -14,7 +14,7 @@ public class SociosMain {
  * ordenaar por nombre, cuenta y despues por id*/
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		boolean bucle = false;
+		boolean bucle = true;
 		// empezando el programa
 		System.out.println("\tCaseta: Los hartibles de Juan Belmonte 258");
 		System.out.println("¿Cuantos socios quieres generar?\n");
@@ -32,6 +32,7 @@ public class SociosMain {
 		System.out.println("2) Ordenar por id");
 		System.out.println("3) Ordenar por nombre e id");
 		System.out.println("4) Ordenar por nombre, cuenta e id");
+		System.out.println("5) Salir");
 		int elecc = sc.nextInt();
 		
 		switch (elecc) {
@@ -52,7 +53,7 @@ public class SociosMain {
 			}
 			break;
 		case 3:
-			Arrays.sort(socios, new CompararNombre());
+			Arrays.sort(socios, new CompararNombreId());
 			
 			for (Socios s : socios) {
 				System.out.println(s.toString());
@@ -60,15 +61,19 @@ public class SociosMain {
 			}
 			break;
 		case 4:
-			Arrays.sort(socios, new CompararNombre());
+			Arrays.sort(socios, new CompararNombreCuentaId());
 			
 			for (Socios s : socios) {
 				System.out.println(s.toString());
 				
 			}
 			break;
-		default:
+		case 5:
 			bucle = false;
+			System.out.println("Hasta luegito...");
+			break;
+		default:
+			bucle = true;
 			break;
 		}
 		
