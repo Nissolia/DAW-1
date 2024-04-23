@@ -74,8 +74,8 @@ public class SociosMain {
 				break;
 			case 4:
 				System.out.println("\n\tSocios ordenados por nombre, cuenta e id:");
-				Arrays.sort(socios, new CompararNombreCuentaId());
 
+				Socios.sortBubble(socios, new CompararNombreCuentaId());
 				for (Socios s : socios) {
 					System.out.println(s.toString());
 

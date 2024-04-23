@@ -88,7 +88,21 @@ public class Socios implements Comparable<Socios> {
 
 	@Override
 	public String toString() {
-		return "Socios: id Socio: " + id_socio + ", "
-				+ "Nombre: " + nombre + ", Cuenta: " + cuenta + ".";
+		return "Socios: id Socio: " + id_socio + ", " + "Nombre: " + nombre + ", Cuenta: " + cuenta + ".";
+	}
+
+	public static void sortBubble(Socios lista[], CompararNombreCuentaId e) {
+		int cont = 0;
+		for (int i = 0; i < lista.length; i++) {
+			for (int j = i + 1; j < lista.length; j++) {
+				if (e.compare(lista[i], lista[j]) < 0) { // Cambiado -1 por 1
+					Socios socio_temp = lista[i];
+					lista[i] = lista[j];
+					lista[j] = socio_temp;
+				}
+				cont++;
+			}
+		}
+		System.out.println("TOTAL INTERACCIONES: " + cont);
 	}
 }

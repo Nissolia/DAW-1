@@ -21,5 +21,4 @@ public class CompararNombreCuentaId implements Comparator<Socios> {
 		}
 		return iguales;
 	}
-
 }
