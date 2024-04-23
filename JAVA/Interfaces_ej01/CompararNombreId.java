@@ -10,7 +10,7 @@ public class CompararNombreId implements Comparator<Socios> {
 		// seguimos por aquí
 		if (iguales == 0) {
 			// si son iguales pasa a la cuenta
-			iguales = (int) ((o2.getCuenta() - o1.getCuenta()) * 100);
+			iguales = (int) ((o1.getCuenta() - o2.getCuenta()) * 100);
 		}
 		return iguales;
 	}

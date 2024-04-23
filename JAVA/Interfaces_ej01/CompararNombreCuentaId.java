@@ -14,9 +14,9 @@ public class CompararNombreCuentaId implements Comparator<Socios> {
 		// seguimos por aquí
 		if (iguales == 0) {
 			// si son iguales pasa a la cuenta
-			iguales = (int) ((o2.getCuenta() - o1.getCuenta())*100);
+			iguales = (int) ((o1.getCuenta() - o2.getCuenta())*100);
 			if (iguales == 0) {
-				iguales = o2.getId_socio() - o1.getId_socio();
+				iguales = o1.getId_socio() - o2.getId_socio();
 			}
 		}
 		return iguales;

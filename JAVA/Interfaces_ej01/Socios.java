@@ -44,7 +44,7 @@ public class Socios implements Comparable<Socios> {
 		Socios[] socios = new Socios[cantidad];
 		int rand;
 		for (int i = 0; i < cantidad; i++) {
-			rand = (int) (Math.random() * 100);
+			rand = (int) (Math.random() * 1000);
 			int id_socio = i + 1;
 			String nombre = generarNombreAleatorio();
 			double cuenta = rand;
