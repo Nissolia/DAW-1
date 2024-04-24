@@ -1,7 +1,7 @@
-const razas = ["Humano", "Elfo", "Enano", "Mediano", "Dragonborn", "Gnomo", "Medusa", "Tiefling", "Orco"];
+const razas = ["Humano", "Elfo", "Enano", "Mediano", "Dragonborn", "Gnomo", "Drown", "Tiefling", "Orco", "Gigante"];
         const clases = ["Bárbaro", "Bardo", "Clérigo", "Druida", "Hechicero", "Mago", "Monje", "Paladín", "Pícaro", "Explorador", "Guerrero"];
-        const trasfondos = ["Acolito", "Charlatán", "Criminal", "Erudito", "Héroe de guerra", "Noble", "Saber popular", "Sacerdote", "Vagabundo"];
-        const profesiones = ["Alquimista", "Cazador", "Forjador", "Granjero", "Mercenario", "Pescador", "Sastre", "Tavernero", "Médico", "Minero"];
+        const trasfondos = ["Acolito", "Charlatán", "Criminal", "Erudito", "Héroe de guerra", "Noble", "Sacerdote", "Vagabundo"];
+        const profesiones = ["Alquimista", "Cazador", "Forjador", "Granjero", "Mercenario", "Pescador", "Sastre", "Tavernero", "Médico", "Minero", "Mantenido"];
         const alineamientos = ["Legal Bueno", "Neutral Bueno", "Caótico Bueno", "Legal Neutral", "Neutral", "Caótico Neutral", "Legal Malvado", "Neutral Malvado", "Caótico Malvado"];
 
         function randomNumber(min, max) {
