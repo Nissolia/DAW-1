@@ -1,3 +1,3 @@
-# Ejercicios de clase
+# Proyectos
 
-Ejercicios hechos de clase para rellenar espacio y tenerlos guardados en algún sitio.
+Lenguajes de programación y de marca.
