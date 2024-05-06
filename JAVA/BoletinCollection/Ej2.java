@@ -14,19 +14,19 @@ public class Ej2 {
 		 */
 		Scanner sc = new Scanner(System.in);
 		// insertamos arraylist
-		ArrayList<Ej2_Perro> perros = new ArrayList<>(); 
+		ArrayList<Ej2_Perro> perros = new ArrayList<>();
 		int elecc = 0;
-		
+
 		// empezamos a codificar
 		System.out.println("__________________ MENÚ");
 		System.out.println("1) Agregar un perro");
 		System.out.println("2) Buscar por el nombre");
 		System.out.println("3) Modificar los datos");
-		System.out.println("4) Elimitar un perro");
+		System.out.println("4) Eliminar un perro");
 		System.out.println("5) Cambiar uno por otro");
 		switch (elecc) {
 		case 1:
-
+			perros.addAll();
 			break;
 		case 2:
 
