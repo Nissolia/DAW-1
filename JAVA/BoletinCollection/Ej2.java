@@ -26,7 +26,7 @@ public class Ej2 {
 		System.out.println("5) Cambiar uno por otro");
 		switch (elecc) {
 		case 1:
-			perros.addAll();
+			//perros.addAll();
 			break;
 		case 2:
 

@@ -35,7 +35,7 @@ public class NumEnteros {
 		ArrayList<Integer> listaNoRepe = new ArrayList<>();
 		ArrayList<Integer> listaRepe = new ArrayList<>();
 		ArrayList<Integer> listaNoRepeUnNum = new ArrayList<>();
-// empezamos con las listas
+		// empezamos con las listas
 		int aux = -1;
 		// hay que buscar una forma de que los elementos no se repitan anteriormente
 		for (Integer integer : lista) {
@@ -50,7 +50,7 @@ public class NumEnteros {
 				System.out.println("Vaya liada");
 			}
 		}
-		// 
+		// frecuency collections
 		
 		// imprimimos
 		System.out.println("Elementos de los números sin repetir: ");
