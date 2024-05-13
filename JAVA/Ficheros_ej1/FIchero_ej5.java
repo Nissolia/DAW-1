@@ -16,6 +16,7 @@ public class FIchero_ej5 {
 		 */
 		int elecc = 0;
 		String nombretxt = "";
+		String cadenatxt[] = new String[3];
 		do {
 
 			System.out.println("· · · · · Menú · · · · · · · · · ·\n1) Creación de fichero de texto"
@@ -33,8 +34,23 @@ public class FIchero_ej5 {
 			switch (elecc) {
 			case 1: {
 				System.out.println("Creación de fichero de texto, ponle un nombre al \'txt\'");
-				nombretxt = sc.nextLine() + ".txt";
-				System.out.println(nombretxt);
+
+				try {
+					nombretxt = sc.nextLine() + ".txt";
+					System.out.println(nombretxt);
+				} catch (Exception e) {
+					System.out.println("Vaya liada...");
+				}
+				System.out.println(
+						"Indica en la primera linea tu nombre, en la segunda tus apellidos y en la tercera tu ciudad de nacimiento");
+
+				try {
+					cadenatxt[0] = sc.nextLine();
+					cadenatxt[1] = sc.nextLine();
+					cadenatxt[2] = sc.nextLine();
+				} catch (Exception e) {
+					System.out.println("No se como pero la has liado con una cadena de texto...");
+				}
 				break;
 			}
 			case 2: {
