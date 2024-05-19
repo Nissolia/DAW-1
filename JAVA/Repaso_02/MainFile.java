@@ -1,10 +1,11 @@
 package Repaso_02;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
-import java.util.ArrayList;
 import java.util.Scanner;
 import java.io.FileReader;
+import java.io.FileWriter;
 
 public class MainFile {
 
@@ -16,8 +17,8 @@ public class MainFile {
 	 */
 	final static String rutaArchivos = "C:\\Users\\noeli\\Documents\\Programacion\\3cer_trimestre\\Textos";
 
-	/*************************************
-	 * MAIN
+	/**************************************
+	 **************** MAIN ****************
 	 *************************************/
 
 	public static void main(String[] args) {
@@ -84,10 +85,93 @@ public class MainFile {
 				}
 
 				break;
-			case 2:// sobreescribir archivo
+			case 2:
+				System.out.println("Los archivos que tenemos son los siguientes:");
+				// usamos el metodo creado para enseñar que ficheros tenemos en la carpeta
+				mostrarListaArchivos();
+				sc.nextLine(); // limpiamos buffer por precaucion
+				System.out.println("\n¿Qué archivo quieres sobreescribir?");
+				nombreTxt = sc.nextLine();
+				File archivoSobre = new File(rutaArchivos + "\\" + nombreTxt);
+				// comprobamos que el archivo existe y sobreescribe este mismo
+				if (archivoSobre.exists() == true) {
+					// creamos la variable para poder sobreeescribir
+					BufferedWriter sobreEscrituraTxt = null;
+					try {
+						sobreEscrituraTxt = new BufferedWriter(new FileWriter(rutaArchivos + "\\" + nombreTxt));
+						System.out.println("Si quieres añadir más de una línea pon un numero positivo.");
+						int lineasTexto = sc.nextInt();
+						sc.nextLine(); // limpiamos buffer por precaucion
+						if (lineasTexto <= 0) {
+							lineasTexto = 0;
+						} else {
+							String textoTxt = "";
+							// creamos este controlador para saber cuantas veces hay que escribir
+							for (int i = 0; i < lineasTexto; i++) {
+								System.out.println("Escribe la línea de texto " + i);
+								textoTxt = sc.nextLine();
+								sobreEscrituraTxt.write(textoTxt + "\n");
+							}
+						}
+
+					} catch (Exception e) {
+						System.out.println("Pon la información correcta...");
+					} finally {
+						try {
+							sobreEscrituraTxt.close();
+						} catch (Exception e2) {
+							System.out.println("Se ha cerrado incorrectamente el archivo de texto.");
+						}
+					}
+
+				} else {
+					System.out.println("No puedo sobreescribir un archivo que no existe");
+				}
+
+				// sobreescribir archivo
 
 				break;
 			case 3:// escribir al final
+				System.out.println("Los archivos que tenemos son los siguientes:");
+				mostrarListaArchivos();
+				sc.nextLine(); // limpiar buffer por precaución
+				System.out.println("\n¿En que archivo quieres escribir?");
+				String nombreTxtEscri = sc.nextLine();
+				File archivoEscribir = new File(rutaArchivos + "\\" + nombreTxtEscri);
+
+				// Comprobar que el archivo existe y escribir al final del archivo
+				if (archivoEscribir.exists()) {
+					BufferedWriter sobreEscrituraTxt = null;
+					try {
+						sobreEscrituraTxt = new BufferedWriter(
+								new FileWriter(rutaArchivos + "\\" + nombreTxtEscri, true));
+						System.out.println("Si quieres añadir más de una línea pon un número positivo.");
+						int lineasTexto = sc.nextInt();
+						sc.nextLine(); // limpiar buffer por precaución
+						if (lineasTexto <= 0) {
+							lineasTexto = 0;
+						} else { // Crear este controlador para saber cuántas veces hay que escribir
+							for (int i = 0; i < lineasTexto; i++) {
+								System.out.println("Escribe la línea de texto " + i);
+								String textoTxt = sc.nextLine();
+								sobreEscrituraTxt.write(textoTxt + "\n");
+							}
+						}
+					} catch (Exception e) {
+						System.out.println("Pon la información correcta...");
+					} finally {
+						try {
+							if (sobreEscrituraTxt != null) {
+								sobreEscrituraTxt.close();
+							}
+						} catch (Exception e2) {
+							System.out.println("Se ha cerrado incorrectamente el archivo de texto.");
+						}
+					}
+
+				} else {
+					System.out.println("No puedo escribir al final de un archivo que no existe.");
+				}
 
 				break;
 			case -1:
