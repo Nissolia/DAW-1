@@ -1,5 +1,7 @@
 package Repaso_ej1;
 
+import java.util.Arrays;
+
 public class Atleta {
 	/*
 	 * Desarrolla un programa para gestionar la competición de atletismo de la FESAC
@@ -26,7 +28,7 @@ public class Atleta {
 
 	public Atleta() {
 		// Listas de nombres, países y tiempos ficticios
-		String[] nombres = { "Juan", "Ana", "Luis", "Maria", "Pedro", "Lucia" };
+		String[] nombres = { "Pepa", "Ana", "Luis", "Maria", "Pedro", "Lucia" };
 		String[] paises = { "España", "México", "Argentina", "Colombia", "Chile", "Perú" };
 		String[] tiempos = { "10:23", "11:47", "09:15", "12:30", "08:59", "10:05" };
 
@@ -94,43 +96,39 @@ public class Atleta {
 	 */
 
 	public int carrera(Atleta at1, Atleta at2, Atleta at3) {// metemos los objetos por parametros
-		int r1 = 0, r2 = 0, r3 = 0;
+		
+		int[] r= {0,0,0};
 		int ganador = 0;
 
 		do {
 			// comprobamos la carrera de las personas que están en ella
-			r1 += Math.random() * 5;
-			r2 += Math.random() * 5;
-			r3 += Math.random() * 5;
-		} while (r1 <= CARRERA || r2 <= CARRERA || r3 <= CARRERA);
+			r[0] += Math.random() * 5;
+			r[1] += Math.random() * 5;
+			r[2] += Math.random() * 5;
+		} while (r[0] <= CARRERA || r[1] <= CARRERA || r[2] <= CARRERA);
 		// confirmamos que uno de ellos ha conseguido ganar la carrera y se muestra por
 		
+
 		// pantalla
 		System.out.print(at1.getDorsal() + " | ");
-		for (int i = 0; i < r1; i++) {
+		for (int i = 0; i < r[0]; i++) {
 			System.out.print("#");
 		}
 		System.out.print("\n" + at2.getDorsal() + " | ");
-		for (int i = 0; i < r2; i++) {
+		for (int i = 0; i < r[1]; i++) {
 			System.out.print("#");
 		}
 		System.out.print("\n" + at3.getDorsal() + " | ");
-		for (int i = 0; i < r3; i++) {
+		for (int i = 0; i < r[3]; i++) {
 			System.out.print("#");
 		}
-		
-return ganador;
-	}
-	
-	  @Override
-	    public String toString() {
-	        return "Atleta " +
-	                ", dorsal: " + dorsal +
-	                ", nombre: " + nombre +
-	                ", pais: " + pais +
-	                ", tiempo: " + tiempo +
-	                '}';
-	    }
+
+		return ganador;
 	}
 
-
+	@Override
+	public String toString() {
+		return "Atleta " + ", dorsal: " + dorsal + ", nombre: " + nombre + ", pais: " + pais + ", tiempo: " + tiempo
+				+ '}';
+	}
+}
