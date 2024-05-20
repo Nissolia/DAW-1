@@ -5,12 +5,15 @@ import java.util.Scanner;
 public class Atleta_M {
 
 	public static void main(String[] args) {
+		/* VARIABLES */
 		Scanner sc = new Scanner(System.in);
 		int elecc = 1;
 		int menu = 0;
 		boolean numero = true;
 		boolean salida = false;
-		/* Fin de las variables */
+		/***********************/
+		/* COMIENZO DEL CÓDIGO */
+		/***********************/
 		do {
 			System.out.println("¿Cuántos atletas quieres generar?");
 			try {
@@ -33,7 +36,9 @@ public class Atleta_M {
 		for (int i = 0; i < at.length; i++) {
 			at[i] = new Atleta(); // metemos dentro los atletas
 		}
-		// menú
+		/********/
+		/* MENÚ */
+		/********/
 		do {
 			System.out.println("..........................MENÚ");
 			System.out.println("1) Mostrar atleta ganador.");
