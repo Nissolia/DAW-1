@@ -1,6 +1,6 @@
 package Repaso_ej1;
 
-import java.util.Arrays;
+import java.util.Iterator;
 
 public class Atleta {
 	/*
@@ -79,77 +79,71 @@ public class Atleta {
 	 * listadoCompleto() donde se detallen todos los detalles de todos los
 	 * corredores;
 	 */
-	public void listadoCompleto() {
-
+	public void listadoCompleto(Atleta at[]) {
+		System.out.println("Disponemos de los siguientes atletas:");
+		for (int j = 0; j < at.length; j++) {
+			System.out.println(at[j]);
+		}
 	}
 
 	/*
 	 * mostrarGanador() donde mostrará los datos sólo del ganador;
 	 */
-	public void mostrarGanador(Atleta at1, Atleta at2, Atleta at3) {
-		int i = carrera(at1, at2, at3);
+	public void mostrarGanador(Atleta at[]) {
+		 // Llama al método carrera que toma un array de Atleta y devuelve el índice del ganador
+	    int i = carrera(at);
 
-		switch (i) {
-		case 0:
-			System.out.println("Ha ganado el siguiente corredor: \n" + at1);
-			break;
-		case 1:
-			System.out.println("Ha ganado el siguiente corredor: \n" + at2);
-			break;
-		case 2:
-			System.out.println("Ha ganado el siguiente corredor: \n" + at3);
-			break;
-		default:
-			System.out.println("Error: índice de ganador no válido");
-
-			break;
-		}
+	    // Imprime el ganador basado en el índice devuelto por el método carrera
+	    if (i >= 0 && i < at.length) {
+	        System.out.println("Ha ganado el siguiente corredor: \n" + at[i]);
+	    } else {
+	        System.out.println("Error: índice de ganador no válido");
+	    }
 	}
 
-	/*
-	 * metodo: carrera // en este metodo generamos la carrera aleatoria en la que
+	/**
+	 * carrera(obj, obj, obj)
+	 * En este metodo generamos la carrera aleatoria en la que
 	 * veremos que atleta gana
 	 */
 
-	public int carrera(Atleta at1, Atleta at2, Atleta at3) {// metemos los objetos por parametros
+	public int carrera(Atleta at[]) {// metemos los objetos por parametros
+		   int[] r = new int[at.length]; // Crear un array para las distancias de cada atleta
+		    int ganador = 0;
+		    final int CARRERA = 30; // Define la distancia para ganar la carrera
 
-		int[] r = { 0, 0, 0 };
-		int ganador = 0;
+		    do {
+		        // Actualizar la distancia de cada atleta
+		        for (int i = 0; i < r.length; i++) {
+		            r[i] += Math.random() * 5;
+		        }
+		        
+		        // Verificar si alguno ha ganado la carrera
+		        for (int i = 0; i < r.length; i++) {
+		            if (r[i] >= CARRERA) {
+		                ganador = i;
+		                break;
+		            }
+		        }
+		    } while (r[ganador] < CARRERA);
 
-		do {
-			// comprobamos la carrera de las personas que están en ella
-			r[0] += Math.random() * 5;
-			r[1] += Math.random() * 5;
-			r[2] += Math.random() * 5;
-		} while (r[0] <= CARRERA || r[1] <= CARRERA || r[2] <= CARRERA);
-		// confirmamos que uno de ellos ha conseguido ganar la carrera y se muestra por
-		for (int i = 0; i < r.length; i++) {
-			if (r[i] >= 30) {
-				ganador = i;
-			}
-		}
+		    // Mostrar resultados de la carrera
+		    for (int i = 0; i < at.length; i++) {
+		        System.out.print(at[i].getDorsal() + " | ");
+		        for (int j = 0; j < r[i]; j++) {
+		            System.out.print("#");
+		        }
+		        System.out.println(); // Salto de línea después de cada atleta
+		    }
+		    
+		    System.out.println("\n");
 
-		// pantalla
-		System.out.print(at1.getDorsal() + " | ");
-		for (int i = 0; i < r[0]; i++) {
-			System.out.print("#");
-		}
-		System.out.print("\n" + at2.getDorsal() + " | ");
-		for (int i = 0; i < r[1]; i++) {
-			System.out.print("#");
-		}
-		System.out.print("\n" + at3.getDorsal() + " | ");
-		for (int i = 0; i < r[2]; i++) {
-			System.out.print("#");
-		}
-		System.out.println("\n");
-// si es 0 el ganador es el primero, si es 1 el segundo y 2 el tercero
-		return ganador;
+		    // Retornar el índice del ganador
+		    return ganador;
 	}
 
 	@Override
 	public String toString() {
-		return "Atleta " + ", dorsal: " + dorsal + ", nombre: " + nombre + ", pais: " + pais + ", tiempo: " + tiempo
-				+ '}';
+		return "Dorsal: " + dorsal + ", nombre: " + nombre + ", pais: " + pais + ", tiempo: " + tiempo;
 	}
 }
