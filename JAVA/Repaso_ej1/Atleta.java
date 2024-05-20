@@ -86,8 +86,24 @@ public class Atleta {
 	/*
 	 * mostrarGanador() donde mostrará los datos sólo del ganador;
 	 */
-	public void mostrarGanador() {
+	public void mostrarGanador(Atleta at1, Atleta at2, Atleta at3) {
+		int i = carrera(at1, at2, at3);
 
+		switch (i) {
+		case 0:
+			System.out.println("Ha ganado el siguiente corredor: \n" + at1);
+			break;
+		case 1:
+			System.out.println("Ha ganado el siguiente corredor: \n" + at2);
+			break;
+		case 2:
+			System.out.println("Ha ganado el siguiente corredor: \n" + at3);
+			break;
+		default:
+			System.out.println("Error: índice de ganador no válido");
+
+			break;
+		}
 	}
 
 	/*
@@ -96,8 +112,8 @@ public class Atleta {
 	 */
 
 	public int carrera(Atleta at1, Atleta at2, Atleta at3) {// metemos los objetos por parametros
-		
-		int[] r= {0,0,0};
+
+		int[] r = { 0, 0, 0 };
 		int ganador = 0;
 
 		do {
@@ -107,7 +123,11 @@ public class Atleta {
 			r[2] += Math.random() * 5;
 		} while (r[0] <= CARRERA || r[1] <= CARRERA || r[2] <= CARRERA);
 		// confirmamos que uno de ellos ha conseguido ganar la carrera y se muestra por
-		
+		for (int i = 0; i < r.length; i++) {
+			if (r[i] >= 30) {
+				ganador = i;
+			}
+		}
 
 		// pantalla
 		System.out.print(at1.getDorsal() + " | ");
@@ -119,10 +139,11 @@ public class Atleta {
 			System.out.print("#");
 		}
 		System.out.print("\n" + at3.getDorsal() + " | ");
-		for (int i = 0; i < r[3]; i++) {
+		for (int i = 0; i < r[2]; i++) {
 			System.out.print("#");
 		}
-
+		System.out.println("\n");
+// si es 0 el ganador es el primero, si es 1 el segundo y 2 el tercero
 		return ganador;
 	}
 

@@ -7,7 +7,7 @@ public class Atleta_M {
 		Atleta At2 = new Atleta();
 		Atleta At3 = new Atleta();
 		// creacion de atletas para comprobar las cosas de la clase
-At1.carrera(At1, At2, At3);
+		At1.mostrarGanador(At1, At2, At3);
 	}
 
 }
