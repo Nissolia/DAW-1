@@ -8,7 +8,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 
 public class MainFile {
-
+	/* Noelia Baños Jiménez */
 	/*
 	 * Métemos la ruta que usaremos, para no tener que estar escribiendola
 	 * constantemente y así solo tener que añadir "\\" + la variable deseada y de
