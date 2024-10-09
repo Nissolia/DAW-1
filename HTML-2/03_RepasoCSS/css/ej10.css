@@ -1,0 +1,29 @@
+
+
+span {
+    width: 180px;
+    border: 1px solid black;
+    padding: 2rem, 0rem;
+    margin:0.2rem;
+    display: inline-block;
+    text-align: center;
+    color: white;
+    background-color: gray;
+}
+
+.divespecial{
+    width: 200px;
+    background-color: rgb(215, 215, 215);
+    border: 3px dotted red;
+    
+}
+.pespecial{
+    width: 300px;
+    border: 3px dotted grey;
+    padding: 1em;
+
+}
+.otroespecial{
+    width: 300px;
+visibility: hidden;
+}
