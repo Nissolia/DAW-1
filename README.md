@@ -1,4 +1,6 @@
-# Proyectos del primer año de desarrollo de aplicaciones web
+# Proyectos del primer año de DAW
 
-Lenguajes de programación y de marca.
-Cada carpeta tiene varias dependiendo de la asignatura.
+Lenguajes de programación como C++, Java y de marca como HTML, CSS.
+aprendizaje en CML y XSD
+Aprendizaje de MySql
+Cada carpeta tiene varias subcarpetas dependiendo de la asignatura.
